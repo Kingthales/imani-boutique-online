@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imani Boutique - Admin Panel</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #1a1a1a; color: white; padding: 20px; text-align: center; }
+        .form-container { background: #2a2a2a; padding: 25px; max-width: 400px; margin: 40px auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); border: 1px solid #ffaa00; }
+        input, select, button { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #444; background: #333; color: white; border-radius: 6px; box-sizing: border-box; }
+        input:focus, select:focus { border-color: #ffaa00; outline: none; }
+        button { background: #ffaa00; color: black; font-weight: bold; cursor: pointer; border: none; font-size: 16px; transition: 0.3s; }
+        button:hover { background: #e09600; }
+        a { color: #ffaa00; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2 style="color: #ffaa00; margin-bottom: 20px;">Shyiraho Igicuruzwa Gishya</h2>
+        <form id="addProductForm">
+            <input type="text" id="pName" placeholder="Izina ry'igicuruzwa (Urugero: Ikanzu)" required>
+            <input type="number" id="pPrice" placeholder="Igiciro (RWF)" required>
+            <select id="pCategory">
+                <option value="Byose">Byose</option>
+                <option value="Imyenda">Imyenda</option>
+                <option value="Complete">Complete</option>
+                <option value="Inkweto n'Ingofero">Inkweto n'Ingofero</option>
+            </select>
+            <input type="text" id="pLink" placeholder="Link y'ifoto (Urugero: https://...)">
+            <button type="submit">Ohereza ku Rubuga</button>
+        </form>
+        <br>
+        <a href="index.html">← Genda ku Rubuga rw'Abakiriya</a>
+    </div>
+
+    <!-- Firebase SDKs to communicate with the database online -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
